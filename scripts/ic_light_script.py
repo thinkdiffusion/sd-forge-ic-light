@@ -1,6 +1,5 @@
 from modules import scripts, script_callbacks
 from modules.ui_components import InputAccordion
-from modules.paths import models_path
 from modules.processing import (
     StableDiffusionProcessing,
     StableDiffusionProcessingTxt2Img,
@@ -327,4 +326,4 @@ class ICLightScript(scripts.Script):
 
 
 script_callbacks.on_after_component(ICLightScript.on_after_component)
-script_callbacks.on_before_ui(lambda: detect_models(models_path))
+script_callbacks.on_before_ui(lambda: detect_models("../../ic-models"))
